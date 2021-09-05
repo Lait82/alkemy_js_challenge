@@ -1,0 +1,58 @@
+@movements = http://localhost:4000/movements
+@login = http://localhost:4000/login
+
+@signin = http://localhost:4000/signin
+GET {{movements}}
+
+###
+POST {{movements}}
+Content-Type: application/json
+
+
+# {
+#   "reason":"manzanas",
+#   "category":"outcome",
+#   "creation_date": "{{$timestamp}}",
+#   "amount": 540,
+#   // default info
+#   "currency": "ARS",
+#   "id_user": 1
+# }
+ 
+###
+GET {{movements}}/2
+
+###
+DELETE {{movements}}/1/23
+
+### testing update
+PUT {{movements}}/19
+Content-Type: application/json
+
+{
+  "reason": "manzanitas",
+  "amount": 58.4,
+  "creation_date": "{{$timestamp}}"
+}
+
+###
+POST {{login}}
+Content-Type: application/json
+
+{
+  "email": "manuexposito82@outlook.com",
+  "pass": "admin123"
+}
+
+### SIGN IN
+
+POST {{signin}}
+Content-Type: application/json
+
+{
+  "full_name": "comandante ricardo",
+  "surname": "Fort",
+  "email": "crf@maiame.com",
+  "pass": "felfort"
+
+}

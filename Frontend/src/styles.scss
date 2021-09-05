@@ -1,0 +1,200 @@
+*{
+  margin: 0px;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+body{
+  background-color: #3f3f3f ;
+}
+button{
+  color: white;
+  background-color: #5885AF;
+  border: 1px solid rgba(195,224,229 , 0.5);
+
+  &:hover{
+    background-color: #D36928;
+    border: 1px solid transparent;
+    transition: 300ms ease-in-out;
+  }
+}
+.Section{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.SectionMain{
+  display:flex;
+  flex-direction: column;
+  width: 1360px;
+  justify-content:center;
+}
+.NavItemsContainer{
+  display: flex;
+  color:white;
+  justify-content: space-between;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+.ContentContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: fit-content;
+  padding-top: 5%;
+}
+.InputsContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  justify-self: flex-end;
+  padding-right: 4em;
+  align-items: flex-end;
+  height: 100%;
+  width: 50%;
+  color:white;
+  font-weight: bold;
+  input{
+    width: 200px;
+  }
+  select{
+    width: 200px;
+  }
+  .SingleInput{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    &:last-child{
+      justify-self: flex-end;
+    }
+  }
+}
+.MovementsContainer{
+  display: flex;
+  flex-direction: column;
+  margin-right: 4%;
+
+}
+.MovementsBtns{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 2px;
+  color: white;
+
+}
+.Movements{
+  display: flex;
+  flex-direction: column;
+  color:white;
+  height: 70vh;
+  overflow-y: scroll;
+}
+
+
+.SingleMovContainer{
+  display: flex;
+  flex-direction: column;
+  position:relative;
+  min-height: 86px;
+  font-weight: bold; //este
+  border-bottom: 2px solid rgba(255,255,255, 0.5); // este
+  &:first-child{
+    border-top: 2px solid rgba(255,255,255, 0.5);
+  }
+}
+.SingleMovement{
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  border-left: 2px solid rgba(255,255,255, 0.5);
+  border-right: 2px solid rgba(255,255,255, 0.5);
+  &:hover{
+    background-color:#D36928;
+    transition: 300ms ease-in-out;
+  }
+}
+.EditMov{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  display: none;
+  border-radius: 0px 0px 40px 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  transition: 300ms ease-in-out;
+  span{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+  }
+  input{
+    width: 60%;
+  }
+}
+
+
+
+.SingleMovContainer--Collapsed{
+  display: flex;
+  flex-direction: column;
+  font-weight: bold; //este
+  &:first-child{
+    border-top: 2px solid rgba(255,255,255, 0.5);
+  }
+}
+.SingleMovement--Collapsed{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 86px;
+  align-items: center;
+  border-left: 2px solid rgba(255,255,255, 0.5);
+  border-right: 2px solid rgba(255,255,255, 0.5);
+  &:hover{
+    background-color:#D36928;
+    transition: 300ms ease-in-out;
+  }
+}
+.EditMov--Collapsed{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-radius: 0px 0px 40px 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-left: 2px solid rgba(255,255,255, 0.5);
+  border-bottom: 2px solid rgba(255,255,255, 0.5);
+  border-right: 2px solid rgba(255,255,255, 0.5);
+  position:relative;
+  span{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  input{
+    width: 60%;
+  }
+}
+
+
+
+.MovType--outcome{
+  // background-color: red;
+  font-weight: bolder;
+  color:#FFC7C7;
+  
+}
+
+.MovType--income{
+  // background-color: red;
+  font-weight: bolder;
+  color:#AEEAB8;
+
+}
